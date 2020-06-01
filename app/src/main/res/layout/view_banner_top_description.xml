@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:minHeight="400dp"
+        tools:src="@drawable/banner_top" />
+
+    <View
+        android:id="@+id/shadowView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/background_half_transparent"
+        app:layout_constraintTop_toTopOf="@id/imageView" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/subTitleTextView"
+        app:layout_constraintTop_toTopOf="@id/shadowView"
+        tools:text="ZALANDODAYS" />
+
+    <TextView
+        android:id="@+id/subTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/shadowView"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        tools:text="Bis zu 50% auf deine Lieblingsbrands" />
+</androidx.constraintlayout.widget.ConstraintLayout>
